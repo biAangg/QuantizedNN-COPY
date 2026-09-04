@@ -1,0 +1,23 @@
+
+# QuantizeNN Front-End Architecture
+
+This repository contains the Phase 1 SwiftUI build for the QuantizeNN prototype. It strictly adheres to privacy-preserving medical UI guidelines. No clinical diagnostic terminology is utilized, and the UI enforces absolute data provenance.
+
+## The Seam (Where Phase 2 Attaches)
+The app runs entirely isolated from device hardware and ML frameworks. To attach the real quantized neural network and camera array, replace the environment variables injected in `QuantizeNNApp.swift`:
+
+1.  **InferenceEngine**
+    * **Currently:** `MockInferenceEngine` returns a static label and sleeps for 1.5s.
+    * **Implementation:** Build a new class conforming to `InferenceEngine` that imports `CoreML`. Inject your INT8 `.mlmodelc` here and pass the `CVPixelBuffer` for analysis.
+
+2.  **CaptureSource**
+    * **Currently:** `MockCaptureSource` emits a predefined sequence of `CaptureQuality` booleans to drive the shutter UI.
+    * **Implementation:** Build a class conforming to `CaptureSource` that imports `AVFoundation`. Map Laplacian variance to `.focus` and the luminance histogram to `.lighting`.
+
+## Hardware Telemetry
+The Performance tab strictly uses real, obtainable iOS APIs.
+* **Real Data:** `ProcessInfo.processInfo.thermalState` drives the thermal indicator. `task_vm_info` and `CFAbsoluteTime` will be mapped to the footprint and latency cards when Phase 2 replaces the static text.
+* **Excluded:** Die temperatures (°C), rail voltage, and TOPS are explicitly removed as iOS does not expose them.
+
+## Third-Party Dependencies
+* Zero. SwiftData is utilized natively for persistence.
