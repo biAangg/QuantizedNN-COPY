@@ -397,10 +397,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 358465D6S8;
+				DEVELOPMENT_TEAM = V9AS3Q4B58;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "QuantizeNN requires camera access to capture high-resolution images of skin spots for local, offline screening. Photos are encrypted on your device and never uploaded to the internet";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face ID is used to unlock your encrypted scan history.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -431,10 +431,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 358465D6S8;
+				DEVELOPMENT_TEAM = V9AS3Q4B58;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "QuantizeNN requires camera access to capture high-resolution images of skin spots for local, offline screening. Photos are encrypted on your device and never uploaded to the internet";
 				INFOPLIST_KEY_NSFaceIDUsageDescription = "Face ID is used to unlock your encrypted scan history.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

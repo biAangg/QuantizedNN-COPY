@@ -10,7 +10,7 @@ struct QuantizeNNApp: App {
             RootTabView()
                 .modelContainer(for: ScanRecord.self, inMemory: true) // Using inMemory for prototype
                 .environment(\.inferenceEngine, MockInferenceEngine())
-                .environment(\.captureSource, MockCaptureSource())
+                .environment(\.captureSource, HardwareCaptureSource())
         }
     }
 }
